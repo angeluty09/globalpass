@@ -10,10 +10,10 @@ document.getElementById('clienteForm').addEventListener('submit', function(e) {
     const tuNumero = "+584129330204"; 
 
     // Mensaje para WhatsApp
-    const mensaje = Hola! Soy ${nombre}. Acabo de registrarme en la web de Importaciones. %0A +
-                    Correo: ${correo} %0A +
-                    WhatsApp: ${telf} %0A +
-                    Quiero los datos para pagar el curso y recibir mi código.;
+    const mensaje = `¡Hola! Soy ${nombre}. Acabo de registrarme en la web de Importaciones.
+Correo: ${correo}
+WhatsApp: ${telf}
+Quiero los datos para pagar el curso y recibir mi código.`;
 
     // Abrir WhatsApp
     window.open(https://wa.me/${tuNumero}?text=${mensaje}, '_blank');
