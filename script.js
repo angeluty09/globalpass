@@ -6,7 +6,7 @@ document.getElementById('clienteForm').addEventListener('submit', function(e) {
     const correo = document.getElementById('correo').value;
     const telf = document.getElementById('whatsapp').value;
 
-    const tuNumero = "584128330204";
+    const tuNumero = "+584129330204";
 
     // El mensaje debe usar estas comillas invertidas ``
     const mensaje = `¡Hola! Soy ${nombre}. Me registré en la web.
