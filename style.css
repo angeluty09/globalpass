@@ -1,0 +1,32 @@
+:root {
+    --primary: #003366;
+    --accent: #ff9900;
+    --bg: #f0f2f5;
+    --success: #28a745;
+}
+
+body { font-family: 'Arial', sans-serif; background-color: var(--bg); margin: 0; padding: 10px; display: flex; justify-content: center; }
+.container { background: #fff; width: 100%; max-width: 500px; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+.hidden { display: none; }
+.header-box { text-align: center; margin-bottom: 20px; }
+h2 { color: var(--primary); }
+
+/* Estilos de Acordeón */
+.accordion-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 8px; overflow: hidden; }
+.accordion-header { width: 100%; padding: 15px; background: #f8f9fa; border: none; text-align: left; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; font-size: 14px; color: var(--primary); }
+.accordion-content { display: none; padding: 15px; border-top: 1px solid #ddd; background: #fff; }
+
+/* Barra de Progreso */
+.progress-container { background: #eee; border-radius: 10px; height: 20px; margin: 15px 0; }
+.progress-bar { background: var(--success); width: 0%; height: 100%; border-radius: 10px; color: white; font-size: 12px; text-align: center; line-height: 20px; transition: 0.3s; }
+
+/* Video Responsivo */
+.video-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
+.video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+button { background-color: var(--accent); color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; width: 100%; cursor: pointer; margin-top: 10px; font-size: 16px; }
+input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+.btn-success { background-color: var(--success); }
+.check-container { display: block; margin-top: 15px; padding: 10px; background: #f1f8e9; text-align: center; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.error { color: red; font-weight: bold; text-align: center; margin-top: 10px; }
