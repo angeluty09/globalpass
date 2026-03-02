@@ -1,28 +1,31 @@
+// Manejo de Registro
 document.getElementById('clienteForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const nombre = document.getElementById('nombre').value; [cite: 10]
-    const correo = document.getElementById('correo').value; [cite: 10]
-    const telf = document.getElementById('whatsapp').value; [cite: 10]
-    const tuNumero = "584129330204"; [cite: 10]
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const telf = document.getElementById('whatsapp').value;
+    const tuNumero = "584129330204"; 
 
-    const mensaje = `Hola! Soy ${nombre}. Acabo de registrarme en la web.%0A` + [cite: 11]
-                    `Correo: ${correo}%0AWhatsApp: ${telf}`; [cite: 11]
+    const mensaje = `Hola! Soy ${nombre}. Me registré en el curso de Importaciones.%0A` +
+                    `Correo: ${correo}%0AWhatsApp: ${telf}`;
 
-    window.open(`https://wa.me/${tuNumero}?text=${mensaje}`, '_blank'); [cite: 11]
-    document.getElementById('registro-section').classList.add('hidden'); [cite: 11]
-    document.getElementById('pago-section').classList.remove('hidden'); [cite: 11]
+    window.open(`https://wa.me/${tuNumero}?text=${mensaje}`, '_blank');
+    document.getElementById('registro-section').classList.add('hidden');
+    document.getElementById('pago-section').classList.remove('hidden');
 });
 
+// Desbloqueo del Curso
 function desbloquearCurso() {
-    const pass = document.getElementById('codigoAcceso').value; [cite: 12]
-    if (pass === "IMPORTA2026.") { [cite: 12]
-        document.getElementById('pago-section').classList.add('hidden'); [cite: 14]
-        document.getElementById('curso-content').classList.remove('hidden'); [cite: 14]
+    const pass = document.getElementById('codigoAcceso').value;
+    if (pass === "IMPORTA2026.") {
+        document.getElementById('pago-section').classList.add('hidden');
+        document.getElementById('curso-content').classList.remove('hidden');
     } else {
-        document.getElementById('errorMsg').innerText = "Código inválido. Pídelo por WhatsApp."; [cite: 14]
+        document.getElementById('errorMsg').innerText = "Código inválido. Pídelo por WhatsApp.";
     }
 }
 
+// Lógica de Acordeón
 function toggleAccordion(id) {
     const content = document.getElementById(`content-${id}`);
     const isVisible = content.style.display === "block";
@@ -30,10 +33,11 @@ function toggleAccordion(id) {
     content.style.display = isVisible ? "none" : "block";
 }
 
+// Actualizar Barra de Progreso
 function actualizarProgreso() {
     const total = document.querySelectorAll('.clase-check').length;
-    const checks = document.querySelectorAll('.clase-check:checked').length;
-    const porcentaje = Math.round((checks / total) * 100);
+    const completadas = document.querySelectorAll('.clase-check:checked').length;
+    const porcentaje = Math.round((completadas / total) * 100);
     
     const bar = document.getElementById('progressBar');
     bar.style.width = porcentaje + "%";
