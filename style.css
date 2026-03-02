@@ -1,76 +1,29 @@
 :root {
-    --primary-color: #003366;
-    --accent-color: #ff9900;
-    --bg-color: #f0f2f5;
+    --primary: #003366;
+    --accent: #ff9900;
+    --success: #28a745;
+    --bg: #f4f7f6;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
+body { font-family: 'Arial', sans-serif; background: var(--bg); margin: 0; padding: 10px; display: flex; justify-content: center; }
+.container { background: #fff; width: 100%; max-width: 500px; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); } [cite: 16, 17]
 
-.container {
-    background: #fff;
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    padding: 20px;
-}
+.hidden { display: none; } [cite: 21]
 
-.header-box { text-align: center; margin-bottom: 20px; }
-h2 { color: var(--primary-color); }
+/* Acordeón */
+.accordion-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+.accordion-header { width: 100%; padding: 15px; background: #f8f9fa; border: none; text-align: left; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; }
+.accordion-content { display: none; padding: 15px; background: #fff; }
 
-label { font-weight: bold; display: block; margin-top: 10px; }
+/* Barra de Progreso */
+.progress-container { background: #eee; border-radius: 10px; height: 20px; margin: 15px 0; }
+.progress-bar { background: var(--success); width: 0%; height: 100%; border-radius: 10px; color: white; font-size: 12px; text-align: center; transition: 0.3s; }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
+/* Video Responsivo [cite: 24] */
+.video-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-responsive iframe { position: absolute; top:0; left:0; width:100%; height:100%; border-radius: 8px; }
 
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.hidden { display: none; }
-
-.pago-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.error { color: red; font-weight: bold; text-align: center; margin-top: 10px; }
-
-/* Responsive Videos */
-.video-item { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-.video-responsive {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-}
-.video-responsive iframe {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    border-radius: 8px;
-}
+button { background: var(--accent); color: white; border: none; padding: 15px; border-radius: 6px; width: 100%; cursor: pointer; font-weight: bold; } [cite: 20]
+input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; } [cite: 19]
+.btn-success { background: var(--success); margin-top: 10px; }
+.check-container { display: block; margin-top: 10px; padding: 10px; background: #e8f5e9; border-radius: 5px; text-align: center; font-size: 14px; }
