@@ -1,154 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    /* ESTILOS GENERALES (PC) */
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f0c29; color: white; margin: 0; padding: 10px; }
-    .container { max-width: 600px; margin: 0 auto; }
+    /* DISEÑO BASE (PC) */
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #0d0d0d; color: white; margin: 0; padding: 10px; }
+    .container { max-width: 500px; margin: 0 auto; }
     
-    .header-box, .pago-card, .welcome-banner, .video-item {
-        background: #1a1a1a;
-        padding: 20px;
-        border-radius: 15px;
+    .card {
+        background: #161616;
+        padding: 18px;
+        border-radius: 12px;
         border: 1px solid #3498db;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        margin-bottom: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.8);
     }
 
-    h2 { color: #f1c40f; margin-top: 0; font-size: 22px; }
-    label { display: block; margin: 10px 0 5px; font-weight: bold; font-size: 14px; }
+    h2 { color: #f1c40f; margin-top: 0; font-size: 20px; text-transform: uppercase; text-align: center; }
+    h3 { color: #3498db; font-size: 16px; margin: 0 0 10px 0; border-left: 3px solid #f1c40f; padding-left: 8px; }
     
+    label { display: block; margin: 8px 0 4px; font-weight: bold; font-size: 13px; color: #bbb; }
     input {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        border: 1px solid #333;
-        background: #222;
-        color: white;
-        box-sizing: border-box; /* Evita que el input se salga de la pantalla */
+        width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 6px;
+        border: 1px solid #333; background: #222; color: white; box-sizing: border-box;
     }
 
     button {
-        width: 100%;
-        padding: 15px;
-        background: linear-gradient(45deg, #3498db, #8e44ad);
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: 16px;
-        transition: 0.3s;
+        width: 100%; padding: 14px; background: linear-gradient(45deg, #2980b9, #8e44ad);
+        color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;
+        font-size: 15px; transition: 0.3s;
     }
 
     .hidden { display: none; }
-    .video-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; }
+    .video-responsive { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; }
     .video-responsive iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
     
-    .error { color: #e74c3c; font-size: 14px; font-weight: bold; }
+    .pago-info { background: #1e1e1e; padding: 12px; border-radius: 8px; border: 1px dashed #555; font-size: 14px; }
+    .error { color: #ff4757; font-size: 13px; font-weight: bold; text-align: center; margin-top: 5px; }
 
-    /* --- AJUSTES PARA CELULAR (AQUÍ SE QUITA EL ESPACIO) --- */
+    /* AJUSTES PARA CELULAR (MENOS ESPACIO) */
     @media screen and (max-width: 480px) {
         body { padding: 5px; }
-        .header-box, .pago-card, .welcome-banner, .video-item {
-            padding: 15px; /* Menos espacio interno */
-            margin-bottom: 15px; /* Menos separación entre bloques */
-        }
-        h2 { font-size: 18px; }
+        .card { padding: 12px; margin-bottom: 10px; }
+        h2 { font-size: 17px; }
+        h3 { font-size: 14px; }
         button { padding: 12px; font-size: 14px; }
-        input { padding: 10px; }
     }
 </style>
 </head>
 <body>
 
     <div class="container">
-        <section id="registro-section">
-            <div class="header-box">
-                <h2>🚢 Importa de USA a Venezuela</h2>
-                <p style="font-size: 14px; color: #bdc3c7;">Aprende a comprar en Amazon, eBay y Walmart desde casa de forma legal.</p>
-            </div>
-            <form id="clienteForm">
-                <label>Tu Nombre:</label>
-                <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
-                
-                <label>Tu WhatsApp:</label>
-                <input type="tel" id="whatsapp" placeholder="Ej: 04121234567" required>
-                
-                <button type="submit">Enviar y Ver Métodos de Pago</button>
-            </form>
-        </section>
-
-        <section id="pago-section" class="hidden">
-            <div class="pago-card">
-                <h3>💳 Métodos de Pago</h3>
-                <p style="font-size: 14px;">Realiza tu pago y envía el capture al WhatsApp.</p>
-                <ul style="font-size: 14px; padding-left: 20px;">
-                    <li><strong>Zelle:</strong> pagos@tucurso.com</li>
-                    <li><strong>Pago Móvil:</strong> Banco Venezuela (0102) <br> V-25701753 - 0412-9330204</li>
-                </ul>
-                <hr style="border: 0.5px solid #333;">
-                <p>¿Ya recibiste tu código?</p>
-                <input type="text" id="codigoAcceso" placeholder="Pega tu código aquí">
-                <button onclick="desbloquearCurso()" style="background: #27ae60;">Desbloquear Curso</button>
-                <p id="errorMsg" class="error"></p>
+        <section id="sec-registro">
+            <div class="card">
+                <h2>📦 CURSO IMPORTACIÓN</h2>
+                <p style="text-align:center; font-size:13px; color:#aaa;">Registra tus datos para ver los métodos de pago y el curso.</p>
+                <form id="formRegistro">
+                    <label>Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Pedro Pérez" required>
+                    <label>WhatsApp:</label>
+                    <input type="tel" id="whatsapp" placeholder="Ej: 04121234567" required>
+                    <button type="submit">ACCEDER A PAGOS</button>
+                </form>
             </div>
         </section>
 
-        <section id="curso-content" class="hidden">
-            <div class="welcome-banner">
-                <h2>✅ ¡Acceso Concedido!</h2>
-                <p>Disfruta de tus clases:</p>
-            </div>
-
-            <div class="video-item">
-                <h3 style="font-size: 16px; color: #3498db;">Clase 1: Configuración de Casillero</h3>
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+        <section id="sec-pago" class="hidden">
+            <div class="card">
+                <h2>💳 MÉTODOS DE PAGO</h2>
+                <div class="pago-info">
+                    <strong>Zelle:</strong> pagos@tucurso.com<br><br>
+                    <strong>Pago Móvil:</strong><br>
+                    Banco: Venezuela (0102)<br>
+                    Cédula: 25.701.753<br>
+                    Teléfono: 0412-9330204
                 </div>
-            </div>
-
-            <div class="video-item">
-                <h3 style="font-size: 16px; color: #3498db;">Clase 2: Compras Seguras</h3>
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-                </div>
+                <p style="font-size:12px; color:#999; margin:10px 0;">* Envía el capture al WhatsApp para recibir tu código de acceso.</p>
+                <hr style="border:0.5px solid #333; margin:15px 0;">
+                <label>Introduce tu Código de Acceso:</label>
+                <input type="text" id="codigoInput" placeholder="Pega el código aquí">
+                <button onclick="verificarCodigo()" style="background:#27ae60;">DESBLOQUEAR VIDEOS</button>
+                <p id="msgError" class="error"></p>
             </div>
         </section>
-    </div>
 
-    <script>
-        const form = document.getElementById('clienteForm');
-        const registroSec = document.getElementById('registro-section');
-        const pagoSec = document.getElementById('pago-section');
-        const cursoSec = document.getElementById('curso-content');
+        <section id="sec-curso" class="hidden">
+            <div style="text-align:center; margin-bottom:15px;">
+                <h2 style="color:#2ecc71;">✅ CURSO DESBLOQUEADO</h2>
+            </div>
 
-        // Al enviar el formulario
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Aquí podrías guardar los datos en una hoja de Google
-            registroSec.classList.add('hidden');
-            pagoSec.classList.remove('hidden');
-            window.scrollTo(0,0);
-        });
-
-        // Función para desbloquear el curso
-        function desbloquearCurso() {
-            const codigo = document.getElementById('codigoAcceso').value;
-            const error = document.getElementById('errorMsg');
-            
-            // EL CÓDIGO ES: USA2026 (Puedes cambiarlo)
-            if(codigo.toUpperCase() === "IMPORTA2026") {
-                pagoSec.classList.add('hidden');
-                cursoSec.classList.remove('hidden');
-                window.scrollTo(0,0);
-            } else {
-                error.innerText = "Código incorrecto. Solicítalo por WhatsApp.";
-            }
-        }
-    </script>
-
-</body>
-</html>
+            <div class="card"><h3>1. Descargar y Verificar Binance</h3><div class="video-responsive"><iframe src="https://www.youtube.com/embed/V-uXhN-smzE"></iframe></div></div>
+            <div class="card"><h3>2. Registro y Verificar Zinli</h3><div class="video-responsive"><iframe src="https://www.youtube.com/embed/UwDEbszF4xk"></iframe></div></div>
+            <div class
