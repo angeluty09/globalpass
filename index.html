@@ -21,14 +21,13 @@
                 <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
                 <label>Tu WhatsApp:</label>
                 <input type="tel" id="whatsapp" placeholder="Ej: 04121234567" required>
-                <button type="submit" id="btnRegistro">Enviar Datos y Ver Pagos</button>
+                <button type="submit">Enviar Datos y Ver Pagos</button>
             </form>
         </section>
 
         <section id="pago-section" class="hidden">
             <div class="pago-card">
                 <h3>💳 Métodos de Pago</h3>
-                <p>Realiza tu pago y envía el comprobante por WhatsApp.</p>
                 <ul>
                     <li><strong>Zelle:</strong> pagos@tucurso.com</li>
                     <li><strong>Pago Móvil:</strong> Mercantil (0105) - 0412-0000000</li>
@@ -36,7 +35,7 @@
                 <hr>
                 <p>¿Ya tienes tu código de acceso?</p>
                 <input type="text" id="codigoAcceso" placeholder="Introduce el código aquí">
-                <button onclick="desbloquearCurso()" class="btn-unlock">Desbloquear Videos</button>
+                <button onclick="desbloquearCurso()">Desbloquear Videos</button>
                 <p id="errorMsg" class="error"></p>
             </div>
         </section>
@@ -48,32 +47,32 @@
                     <div class="progress-bar" id="progressBar">0%</div>
                 </div>
                 <div id="certificado-area" class="hidden">
-                    <button class="btn-success" onclick="alert('¡Felicidades! Captura esta pantalla como tu certificado temporal.')">🎓 Descargar Certificado</button>
+                    <button class="btn-success" onclick="alert('¡Felicidades! Has completado el curso.')">🎓 Descargar Certificado</button>
                 </div>
             </div>
 
             <div id="accordion-container">
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(1)">1. Descargar y Verificar Binance <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(1)">1. Cómo Descargar y Verificar Binance <span>▼</span></button>
                     <div class="accordion-content" id="content-1">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/V-uXhN-smzE" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(2)">2. Registro y Verificación Zinli <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(2)">2. Cómo Registrarte y Verificar Zinli <span>▼</span></button>
                     <div class="accordion-content" id="content-2">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/UwDEbszF4xk" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(3)">3. Verificar PayPal con Zinli <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(3)">3. Cómo Verificar PayPal con Zinli <span>▼</span></button>
                     <div class="accordion-content" id="content-3">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/5ZLDla-p1pI" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
@@ -81,71 +80,71 @@
                     <button class="accordion-header" onclick="toggleAccordion(4)">4. Cómo Recargar Binance <span>▼</span></button>
                     <div class="accordion-content" id="content-4">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/i5uL26DHFLM" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(5)">5. Recargar Zinli con Binance <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(5)">5. Cómo Recargar Zinli con Binance <span>▼</span></button>
                     <div class="accordion-content" id="content-5">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/tdHESORW83U" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(6)">6. Casillero Servicios Expresos <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(6)">6. Crear y Verificar Casillero <span>▼</span></button>
                     <div class="accordion-content" id="content-6">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/Rs_7_DM2vxo" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(7)">7. Primera Compra Gratis en Shein <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(7)">7. Primera Compra Gratis en SHEIN <span>▼</span></button>
                     <div class="accordion-content" id="content-7">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/uIwe7B7e9gw" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(8)">8. App Shein y Cómo Comprar <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(8)">8. Cómo Usar la App de SHEIN <span>▼</span></button>
                     <div class="accordion-content" id="content-8">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/gauWNr1lGW8" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(9)">9. Negocio Rentable Shein (50%) <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(9)">9. Modelo de Negocio SHEIN (50% ahorro) <span>▼</span></button>
                     <div class="accordion-content" id="content-9">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/z6c-HQwY8rs" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(10)">10. Pre-Alerta en el Casillero <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(10)">10. Cómo hacer las Pre-Alerta <span>▼</span></button>
                     <div class="accordion-content" id="content-10">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/bhEP_ZQCobA" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(11)">11. Reempacar en Servicios Expresos <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(11)">11. Cómo Reempacar en el Casillero <span>▼</span></button>
                     <div class="accordion-content" id="content-11">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/h76325IYt-A" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(12)">12. Pagar Factura Casillero <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(12)">12. Cómo Pagar Factura del Casillero <span>▼</span></button>
                     <div class="accordion-content" id="content-12">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/WGDjVhLZxP0" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
@@ -153,28 +152,29 @@
                     <button class="accordion-header" onclick="toggleAccordion(13)">13. Curso de eBay <span>▼</span></button>
                     <div class="accordion-content" id="content-13">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/8eWx1D-osNo" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(14)">14. Shein Colombia a Venezuela <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(14)">14. SHEIN Colombia a Venezuela <span>▼</span></button>
                     <div class="accordion-content" id="content-14">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/UIo_PzjjIxQ" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <button class="accordion-header" onclick="toggleAccordion(15)">15. Cómo comprar en ShopSimons <span>▼</span></button>
+                    <button class="accordion-header" onclick="toggleAccordion(15)">15. Cómo Comprar en ShopSimons <span>▼</span></button>
                     <div class="accordion-content" id="content-15">
                         <div class="video-responsive"><iframe src="https://www.youtube.com/embed/pCMmvCj4Jio" frameborder="0" allowfullscreen></iframe></div>
-                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Completada</label>
+                        <label class="check-container"><input type="checkbox" class="clase-check" onclick="actualizarProgreso()"> Clase completada</label>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
